@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root alignment="TOP_CENTER" prefWidth="250.0" spacing="15.0" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="26.0" prefWidth="282.0">
+         <children>
+            <Label text="Connection" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10.0" />
+            <ComboBox fx:id="cbConnection" editable="false" prefWidth="150.0" promptText="Any" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+
+      <AnchorPane prefHeight="27.0" prefWidth="208.0">
+         <children>
+            <Label text="Region" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <ComboBox fx:id="cbDistrict" editable="false" prefWidth="150.0" promptText="Any" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+
+      <VBox prefHeight="63.0" prefWidth="208.0">
+         <children>
+            <AnchorPane prefHeight="27.0" prefWidth="208.0">
+               <children>
+                  <Label text="Speed" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Slider fx:id="sldSpeed" prefHeight="9.0" prefWidth="140.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="80.0" layoutY="10.0" text="from:" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="10.0" />
+                  <TextField fx:id="tfSpeed" layoutX="120.0" layoutY="2.0" prefHeight="22.0" prefWidth="47.0" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="2.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+
+      <VBox prefHeight="64.0" prefWidth="208.0">
+         <children>
+            <AnchorPane prefHeight="23.0" prefWidth="208.0">
+               <children>
+                  <Label text="Price" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                   <Slider fx:id="sldPrice" prefHeight="9.0" prefWidth="140.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="77.0" layoutY="10.0" text="up to:" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="77.0" AnchorPane.topAnchor="10.0" />
+                  <TextField fx:id="tfPrice" layoutX="120.0" layoutY="5.0" prefHeight="24.0" prefWidth="47.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane>
+          <children>
+            <Button fx:id="btnFind" mnemonicParsing="false" text="Find" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0" />
+            <Button fx:id="btnAllProviders" layoutX="177.0" layoutY="10.0" mnemonicParsing="false" text="All" />
+          </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="28.0" prefWidth="240.0">
+         <children>
+            <Label visible="false" layoutX="74.0" layoutY="7.0" text="Derive:" />
+            <ComboBox visible="false" fx:id="perBox" layoutX="128.0" layoutY="3.0" />
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+   </padding>
+</fx:root>

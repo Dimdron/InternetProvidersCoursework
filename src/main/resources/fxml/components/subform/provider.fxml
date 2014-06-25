@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.dimdron.InternetProviders.components.adapter.*?>
+<?scenebuilder-classpath-element ../../../../../../../target/classes?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dimdron.InternetProviders.controller.ProviderController">
+  <tabs>
+    <Tab text="provider">
+      <content>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <ImageView fx:id="image" fitHeight="134.0" fitWidth="192.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="name" layoutX="235.0" layoutY="14.0" text="Name" />
+                  <TextField fx:id="nameEdit" layoutX="235.0" layoutY="14.0" text="Name" visible="false" />
+                  <TextField fx:id="siteEdit" layoutX="223.0" layoutY="62.0" text="Hyperlink" visible="false" />
+                  <Hyperlink fx:id="site" layoutX="223.0" layoutY="62.0" text="Hyperlink">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem fx:id="siteEditMenuItem" mnemonicParsing="false" text="Edit" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </Hyperlink>
+                  <Label fx:id="rating" layoutX="500.0" layoutY="50.0" text="Rating" />
+                  <TableView fx:id="tvTariffs" layoutX="223.0" layoutY="91.0" prefHeight="249.0" prefWidth="367.0">
+                    <columns>
+                      <TableColumn fx:id="tariff" prefWidth="115.0" text="Tariff" />
+                      <TableColumn fx:id="speed" prefWidth="53.0" text="Speed" />
+                        <TableColumn fx:id="price" prefWidth="57.0" text="Price" />
+                        <TableColumn fx:id="description" prefWidth="141.0" text="Description" />
+                    </columns>
+                  </TableView>
+                  <ListView fx:id="districtsList" disable="true" layoutX="10.0" layoutY="165.0" prefHeight="140.0" prefWidth="200.0" />
+                  <AnchorPane fx:id="adminPane" layoutX="223.0" layoutY="308.0" prefHeight="106.0" prefWidth="350.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                        <HBox AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="100.0">
+                           <children>
+                              <Button fx:id="btnSave" disable="true" mnemonicParsing="false" text="Save">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btnDelete" mnemonicParsing="false" text="Delete" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="130.0" layoutY="6.0" />
+                        <HBox AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Add district:" />
+                                    <HBox>
+                                       <children>
+                                          <ComboBox fx:id="allDistricts" prefWidth="150.0" />
+                                          <Button fx:id="btnAddDistrict" mnemonicParsing="false" text="+">
+                                             <HBox.margin>
+                                                <Insets left="1.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="Add connection:" />
+                                    <HBox>
+                                       <children>
+                                          <ComboBox fx:id="allConnection" prefWidth="150.0" />
+                                          <Button fx:id="btnAddConnection" mnemonicParsing="false" text="+">
+                                             <HBox.margin>
+                                                <Insets left="1.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="30.0" layoutY="-28.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                           <children>
+                              <TextField fx:id="textFieldTariff" prefWidth="119.0" />
+                              <TextField fx:id="textFieldSpeed" prefWidth="50.0" />
+                              <TextField fx:id="textFieldPrice" prefWidth="50.0" />
+                              <TextField fx:id="textFieldDescription" prefWidth="120.0" />
+                              <Button fx:id="btnAddTariff" mnemonicParsing="false" text="+" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="btnReport" layoutX="12.0" layoutY="74.0" mnemonicParsing="false" onAction="#onActionBtnReport" text="Report" />
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="emptyDistrictsList" layoutX="73.0" layoutY="244.0" text="list is empty" visible="true" />
+                  <Label layoutX="14.0" layoutY="148.0" text="Accessible areas:" />
+                  <ListView fx:id="connectionList" disable="true" layoutX="10.0" layoutY="297.0" prefHeight="125.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" />
+                  <Label fx:id="emptyConnectionList" layoutX="68.0" layoutY="380.0" text="list is empty" />
+                  <Label layoutX="14.0" layoutY="310.0" text="Accessible connection types:" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tabComment" text="Comment">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <CustomListView fx:id="listReview" prefWidth="300" visible="false" AnchorPane.bottomAnchor="15" AnchorPane.leftAnchor="15" AnchorPane.topAnchor="15" />
+                  <AnchorPane layoutX="200.0" layoutY="306.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <Label layoutX="20.0" layoutY="42.0" text="Speed" AnchorPane.leftAnchor="15.0" />
+                              <Label layoutX="20.0" layoutY="93.0" text="Support" AnchorPane.leftAnchor="10.0" />
+                              <Label layoutX="20.0" layoutY="149.0" text="Connection" AnchorPane.leftAnchor="3.0" />
+                              <Slider fx:id="sliderSpeed" blockIncrement="5.0" layoutX="55.0" layoutY="43.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+                              <Slider fx:id="sliderSupport" blockIncrement="5.0" layoutX="55.0" layoutY="94.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+                              <Slider fx:id="sliderConnection" blockIncrement="5.0" layoutX="55.0" layoutY="150.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+                              <Label layoutX="112.0" layoutY="7.0" text="Rating" AnchorPane.topAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="257.0" layoutY="186.0" prefHeight="180.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="15.0">
+                           <children>
+                              <Label layoutX="11.0" layoutY="8.0" text="Review" AnchorPane.topAnchor="8.0" />
+                              <Button fx:id="btnSend" disable="true" layoutX="219.0" layoutY="11.0" mnemonicParsing="false" text="Send" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="8.0" />
+                              <TextArea fx:id="reviewText" layoutX="134.0" layoutY="41.0" prefHeight="140.0" prefWidth="150.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="labelReviewsIsEmpty" layoutX="138.0" layoutY="196.0" text="list review is empty" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

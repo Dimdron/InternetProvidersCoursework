@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dimdron.InternetProviders.controller.ReportListController">
+   <children>
+      <VBox layoutX="150.0" layoutY="21.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox onMouseClicked="#onClickedProviders" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fx:id="imgProviders" fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Providers">
+                      <HBox.margin>
+                          <Insets right="50.0" top="30" />
+                      </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox onMouseClicked="#onClickedTariffs" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <ImageView fx:id="imgTariffs" fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Tariffs">
+                      <HBox.margin>
+                          <Insets right="50.0" top="30" />
+                      </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="166.0" mnemonicParsing="false" onAction="#onActionBtnPerformed" text="Repairman" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+    <stylesheets>
+        <String fx:value="/css/reportslist.css" />
+    </stylesheets>
+</AnchorPane>

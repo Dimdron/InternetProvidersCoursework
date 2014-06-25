@@ -1,0 +1,28 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Intellij Idea
+*.iml
+*.ipr
+*.iws
+*.impl
+.idea/
+*.ini
+
+target/
+.settings/
+
+# Maven
+out/
+
+log/
+
+**/test/
+
+#database
+database/
+*.fdb

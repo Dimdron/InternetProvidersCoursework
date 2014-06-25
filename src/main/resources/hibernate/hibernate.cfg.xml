@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.firebirdsql.jdbc.FBDriver</property>  <!--INTERNET_PROVIDERS.FDB  DBPROVIDERS.FDB -->
+        <property name="hibernate.connection.url">
+            jdbc:firebirdsql:localhost/3050:d:/Source/InternetProvider/database/INTERNET_PROVIDERS.FDB</property>
+        <property name="hibernate.connection.username">SYSDBA</property>
+        <property name="hibernate.connection.password">masterkey</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.FirebirdDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.Provider" />
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.District" />
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.ConnectionType" />
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.Tariff" />
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.AdditionalService" />
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.Review" />
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.User" />
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.EventLog" />
+        <mapping class="com.dimdron.InternetProviders.dbconnection.model.ApplicationModel" />
+    </session-factory>
+</hibernate-configuration>

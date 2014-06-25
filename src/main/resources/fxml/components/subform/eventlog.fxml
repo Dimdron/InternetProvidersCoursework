@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dimdron.InternetProviders.controller.EventLogController">
+   <children>
+      <TableView fx:id="tableView" layoutX="95.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="numberColumn" maxWidth="40.0" minWidth="30.0" prefWidth="-1.0" text="#" />
+          <TableColumn fx:id="userColumn" minWidth="150.0" prefWidth="157.0" text="User" />
+          <TableColumn fx:id="eventColumn" minWidth="150.0" prefWidth="212.0" text="Event" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

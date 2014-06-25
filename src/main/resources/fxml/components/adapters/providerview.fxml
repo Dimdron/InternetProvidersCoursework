@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<fx:root prefHeight="79.0" prefWidth="528.0" type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <AnchorPane prefHeight="79.0" prefWidth="219.0">
+         <children>
+            <Hyperlink fx:id="link" layoutX="56.0" layoutY="55.0" text="Hyperlink" />
+            <Label fx:id="name" layoutX="1.0" layoutY="14.0" text="name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="79.0" prefWidth="153.0">
+         <children>
+            <Label fx:id="labelRating" layoutX="37.0" layoutY="33.0" text="rating" />
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>

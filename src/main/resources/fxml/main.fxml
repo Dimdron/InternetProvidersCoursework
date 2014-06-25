@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import com.dimdron.InternetProviders.components.*?>
+<?import com.dimdron.InternetProviders.components.providerpicker.*?>
+<?import com.dimdron.InternetProviders.components.adapter.*?>
+<?import fxml.components.providerpicker.*?>
+<?scenebuilder-classpath-element ../../../../../../../target/classes?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dimdron.InternetProviders.controller.MainController">
+    <children>
+      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="newProviderMenuItem" mnemonicParsing="false" onAction="#onActionNewProviderMenuItem"
+                        text="New provider..." visible="false" />
+              <MenuItem fx:id="menuItemAddUser" mnemonicParsing="false" onAction="#onActionMenuItemAddUser"
+                        text="Add user..." visible="false" />
+              <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="miReports" disable="true" mnemonicParsing="false" onAction="#onActionReportsMenuItem"
+                        text="Reports" />
+              <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#onActionCloseMenuItem" text="Close" />
+            </items>
+          </Menu>
+
+            <Menu mnemonicParsing="false" text="Settings">
+              <items>
+                  <MenuItem fx:id="newDistrictMenuItem" mnemonicParsing="false" onAction="#onActionAddDistrictMenuItem" text="Add district" visible="false" />
+                  <MenuItem fx:id="newConnectionTypeMenuItem" mnemonicParsing="false" onAction="#onActionAddConnectionTypeMenuItem" text="Add connection type" visible="false" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="removeDistrictMenuItem" mnemonicParsing="false" onAction="#onActionRemoveDistrictMenuItem" text="Remove district" visible="false" />
+                  <MenuItem fx:id="removeConnectionTypeMenuItem" mnemonicParsing="false" onAction="#onActionRemoveConnectionTypeMenuItem" text="Remove connection type" visible="false" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuItemSingIn" mnemonicParsing="false" onAction="#onActionSingInMenuItem" text="Sing in" />
+                  <MenuItem fx:id="menuItemCloseSession" disable="true" mnemonicParsing="false" onAction="#onActionCloseSessionMenuItem" text="Exit" />
+              </items>
+            </Menu>
+
+          <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" onAction="#onActionAboutMenuItem" text="About" />
+            </items>
+          </Menu>
+
+            <Menu fx:id="menuComplaints" mnemonicParsing="false" text="Complaints">
+                <items>
+                    <MenuItem fx:id="miComplaintsAdd" mnemonicParsing="false" onAction="#onActionComplainMenuItem" text="Complain..." />
+                    <MenuItem fx:id="miComplaints" visible="false"  mnemonicParsing="false" onAction="#onActionComplaintsMenuItem" text="Complaints..." />
+                </items>
+            </Menu>
+
+            <Menu fx:id="menuEventLog" mnemonicParsing="false" text="Event Log" visible="false">
+              <items>
+                <MenuItem fx:id="menuItemEventLogs" mnemonicParsing="false" onAction="#onActionEventLogsMenuItem" text="Open" />
+              </items>
+            </Menu>
+
+        </menus>
+      </MenuBar>
+            <!--                             -->
+        <AnchorPane fx:id="pickerform" AnchorPane.bottomAnchor="5" AnchorPane.topAnchor="40">
+            <children>
+                <ProviderPicker fx:id="picker" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
+                <CustomListView fx:id="listView" layoutX="303.0" prefHeight="600" prefWidth="450" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="303.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="30.0" />
+                <Label fx:id="lblCount" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="200" />
+            <Button layoutX="14.0" layoutY="517.0" mnemonicParsing="false" onAction="#onActiveBtnPrint" text="Print" />
+            </children>
+        </AnchorPane>
+            <!--                            -->
+    </children>
+</AnchorPane>
